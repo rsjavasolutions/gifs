@@ -21,9 +21,9 @@ public class GifController {
 
     @GetMapping("/")
     public String hello(ModelMap modelMap) {
-       //1. Wyciągnięcie gifów
+        //1. Wyciągnięcie gifów
         List<Gif> gifList = gifRepository.getGifs();
-        modelMap.put("gifs",gifList);
+        modelMap.put("gifs", gifList);
 
         //2. Pokazanie do view
 
@@ -39,21 +39,19 @@ public class GifController {
     }
 
     @GetMapping("/favorites")
-    public String favoritesGifs(ModelMap modelMap){
-        modelMap.put("gifs",gifRepository.getFavoritesGifs());
+    public String favoritesGifs(ModelMap modelMap) {
+        modelMap.put("gifs", gifRepository.getFavoritesGifs());
         return "favorites";
     }
 
     @GetMapping("/gif/{name}")
-    public String getGifByName(@PathVariable String name, ModelMap modelMap){
+    public String getGifByName(@PathVariable String name, ModelMap modelMap) {
         //1. wyciągnięcie gifa
         Gif g = gifRepository.getGifByName(name);
-        modelMap.put("gif")
-
-
         //2. przekazanie do view
-
+        modelMap.put("gif", g);
         //3. zwrócenie widoku
+        return "gif-details";
     }
 
 }
