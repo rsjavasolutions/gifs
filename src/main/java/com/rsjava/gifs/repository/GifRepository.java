@@ -13,8 +13,8 @@ public class GifRepository{
     new Gif("android-explosion","mols",true,1),
     new Gif("ben-and-mike","mika",true,2),
     new Gif("book-dominos","mem",true,0),
-    new Gif("compiler-boot","bot",true,1),
-    new Gif("compiler-boot","code",true,1),
+    new Gif("compiler-bot","bot",true,1),
+    new Gif("cowboy-coder","code",true,1),
     new Gif("infinite-andrew","andrew",true,2)
     );
 
