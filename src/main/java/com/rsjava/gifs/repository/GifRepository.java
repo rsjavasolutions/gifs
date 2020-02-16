@@ -25,7 +25,7 @@ public class GifRepository{
     public String getGifNames(){
         String result = "";
         for (Gif allGif : ALL_GIFS) {
-            result += allGif.getName();
+            result += allGif.getName() + " ";
         }
         return result;
     }
