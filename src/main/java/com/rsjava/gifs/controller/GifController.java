@@ -36,10 +36,10 @@ public class GifController {
     public String showGifNames() {
         return gifRepository.getGifNames();
     }
-    
+
     @GetMapping("/favorites")
-    public String favoritesGifs(){
+    public String favoritesGifs(ModelMap modelMap){
+        modelMap.put("gifs",gifRepository.getFavoritesGifs());
         return "favorites";
     }
-
 }
