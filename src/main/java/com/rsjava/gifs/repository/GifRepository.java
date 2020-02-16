@@ -36,4 +36,15 @@ public class GifRepository{
                 .filter(Gif::getFavorite)
                 .collect(Collectors.toList());
     }
+
+    public Gif getGifByName(String name){
+        Gif gif = null;
+        for (Gif allGif : ALL_GIFS) {
+            if (allGif.getName().equalsIgnoreCase(name)){
+                gif = allGif;
+                return gif;
+            }
+        }
+        return null;
+    }
 }

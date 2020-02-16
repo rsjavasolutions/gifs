@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -42,4 +43,17 @@ public class GifController {
         modelMap.put("gifs",gifRepository.getFavoritesGifs());
         return "favorites";
     }
+
+    @GetMapping("/gif/{name}")
+    public String getGifByName(@PathVariable String name, ModelMap modelMap){
+        //1. wyciągnięcie gifa
+        Gif g = gifRepository.getGifByName(name);
+        modelMap.put("gif")
+
+
+        //2. przekazanie do view
+
+        //3. zwrócenie widoku
+    }
+
 }
