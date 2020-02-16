@@ -28,5 +28,4 @@ public class CategoryController {
         //3. zwrócenie widoku
         return "categories";
     }
-
 }
